@@ -7,6 +7,7 @@ import {useParams} from 'react-router-dom'
 import './Chat.css'
 import db from './firebase'
 import Message from './Message'
+import ChatInput from './ChatInput'
 
  
 function Chat() {
@@ -25,6 +26,7 @@ function Chat() {
               setRoomMessages(snapshot.docs.map(doc=>doc.data()))
           )
     },[roomId])
+    console.log(roomDetails)
     return (
         <div className="chat">
             <div className="chat__header">
@@ -54,7 +56,8 @@ function Chat() {
                   )
               }
             </div>
-            
+              
+            <ChatInput channelName={roomDetails?.name} channelId={roomDetails?.id} />
         </div>
     )
 }

@@ -8,7 +8,7 @@ import { useStateValue } from './StateProvider'
 
 function Login() { 
     const [state,dispatch]=useStateValue() 
-
+ 
     const signIn=() => {
         auth
         .signInWithPopup(provider)
@@ -19,6 +19,7 @@ function Login() {
             })
         })
     }
+    console.log(state)
     return (
         <div className="login"> 
          <div className="login__container">

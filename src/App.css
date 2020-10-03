@@ -2,16 +2,13 @@
 
 :root {
     --slack-color: #3f0f40;
-    --seventh-color: #D0FFE2;
 }
 
+body{
+    overflow: hidden
+}
 
-.app{
-    
-    /* display: flex;
-    height: 100vh;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 10px;
-    color: #faf3dd; */
+.app__body {
+  display: flex;
+  height: 100vh;  
 }

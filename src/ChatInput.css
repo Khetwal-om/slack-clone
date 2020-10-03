@@ -17,5 +17,5 @@
     padding: 20px;
 }
 .chatInput >form>button{
-    /* display: none !important; */
+    display: none !important;
 }

@@ -20,7 +20,6 @@ function SideBar() {
     const [channels,setChannels]=useState([])
     const [{user}]=    useStateValue()
     useEffect(()=>{
-        // useEffect is dependent on our []
         db.collection('collection').onSnapshot(snapshot=> (
             setChannels(snapshot.docs.map(doc=> ({ 
                 id: doc.id,
@@ -45,6 +44,9 @@ function SideBar() {
              <SideBarIcon Icon={InsertCommentIcon} title="Threads"/>
 
              <SideBarIcon Icon={Inbox} title="inbox"/>
+             <SideBarIcon Icon={Apps} title="apps"/>
+             <SideBarIcon Icon={Drafts} title="drafts"/>
+
              <SideBarIcon Icon={ExpandLess} title="Show less"/>
 
              <SideBarIcon Icon={ExpandMore} title="channels"/>
@@ -52,7 +54,7 @@ function SideBar() {
         
             <hr></hr>
 
-             <SideBarIcon Icon={InsertCommentIcon} title="Threads"/>
+             <SideBarIcon Icon={PeopleAlt} title="people"/>
              {channels.map(channel=> (
                  <SideBarIcon title={channel.name} id={channel.id} />
              ))}
